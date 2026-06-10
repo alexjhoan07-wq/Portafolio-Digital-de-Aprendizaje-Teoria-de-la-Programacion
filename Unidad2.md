@@ -1,11 +1,12 @@
 [↩️ Volver al inicio](https://github.com/alexjhoan07-wq/Portafolio-Digital-de-Aprendizaje-Teoria-de-la-Programacion/blob/main/Portafolio.md)
+<div align="center">
 
 # Unidad 2 – Estructuras de Control
 
 [![C](https://img.shields.io/badge/Lenguaje-C-00599C?style=flat-square&logo=c)](https://img.shields.io/badge/Lenguaje-C-00599C?style=flat-square&logo=c)
 [![Condicionales](https://img.shields.io/badge/Estructuras-Condicionales-27ae60?style=flat-square)](https://img.shields.io/badge/Estructuras-Condicionales-27ae60?style=flat-square)
 [![Repetitivas](https://img.shields.io/badge/Estructuras-Repetitivas-e67e22?style=flat-square)](https://img.shields.io/badge/Estructuras-Repetitivas-e67e22?style=flat-square)
-
+</div>
 ---
 
 ## 📋 Tabla de Contenidos
