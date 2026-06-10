@@ -1,9 +1,9 @@
 [↩️ Volver al inicio](https://github.com/alexjhoan07-wq/Portafolio-Digital-de-Aprendizaje-Teoria-de-la-Programacion/blob/main/Portafolio.md)
-<div align="center">
+<div align="center">   
 
-# Unidad 2 – Estructuras de Control
+# Unidad 2 – Estructuras algorítmicas de control
 
-[![C](https://img.shields.io/badge/Lenguaje-C-00599C?style=flat-square&logo=c)](https://img.shields.io/badge/Lenguaje-C-00599C?style=flat-square&logo=c)
+
 [![Condicionales](https://img.shields.io/badge/Estructuras-Condicionales-27ae60?style=flat-square)](https://img.shields.io/badge/Estructuras-Condicionales-27ae60?style=flat-square)
 [![Repetitivas](https://img.shields.io/badge/Estructuras-Repetitivas-e67e22?style=flat-square)](https://img.shields.io/badge/Estructuras-Repetitivas-e67e22?style=flat-square)
 
@@ -150,94 +150,158 @@ Fin_Para
 
 Este ejercicio combina una estructura condicional con una estructura repetitiva para resolver un problema completo, a conticuación se tiene un conteo de los pasos para la resolución de este:
 
-
 ---
 
 ### 3.1 Planteamiento del Problema
 
-> 📝 *Describe aquí el enunciado completo del problema planteado en clase. Incluye el contexto, los datos que se conocen y lo que se desea obtener como resultado.*
+Una empresa de desarrollo de software desea automatizar el control de calidad de las líneas de código producidas por un grupo de programadores en un proyecto. El programa debe permitir ingresar la cantidad total de programadores a evaluar.
+Para cada programador, se deben solicitar las líneas de código escritas en 3 módulos diferentes. El sistema requiere:
+1. Validar estrictamente que las líneas de código ingresadas en cada módulo sean mayores o iguales a cero. Si se ingresa un valor negativo, se debe mostrar un mensaje de error y volver a solicitar el dato.
+2. Calcular el total de líneas de código del programador (suma de los 3 módulos).
+3. Clasificar el nivel de productividad del programador bajo el siguiente criterio:
+   * **Productividad Alta:** 1000 líneas o más.
+   * **Productividad Media:** Entre 500 y 999 líneas.
+   * **Productividad Baja:** Menos de 500 líneas.
 
-**Ejemplo de formato:**
-
-> Desarrollar un programa en lenguaje **[lenguaje dado en clase]** que permita [descripción de lo que debe hacer el programa]. El usuario ingresará [datos de entrada] y el programa deberá [proceso] para mostrar [resultado esperado].
-
----
-
-[🔼 Volver a la tabla de contenidos](#-tabla-de-contenidos)
+El programa debe procesar y mostrar individualmente el total y el nivel de cada programador antes de continuar con el siguiente.
 
 ---
 
 ### 3.2 Análisis del Problema
 
-> 📝 *Identifica y documenta aquí los elementos del problema.*
-
-- **Datos de entrada:**
-  - `[variable 1]` — descripción
-  - `[variable 2]` — descripción
-
-- **Proceso:**
-  - [Describe paso a paso qué operaciones o decisiones realiza el programa]
-
-- **Datos de salida:**
-  - `[resultado]` — descripción
-
+* **Datos de Entrada:**
+  * Cantidad de programadores a evaluar (`total_programadores`).
+  * Líneas de código del Módulo 1 (`mod1`), Módulo 2 (`mod2`) y Módulo 3 (`mod3`).
+* **Procesamiento:**
+  * **Validación:** Uso de bucles `do-while` independientes para garantizar que `total_programadores`, `mod1`, `mod2` y `mod3` sean mayores o iguales a cero.
+  * **Cálculo:** `lineas_totales = mod1 + mod2 + mod3`.
+  * **Clasificación:** Estructura condicional múltiple (`if - else if - else`) para evaluar `lineas_totales`.
+* **Datos de Salida:**
+  * Suma total de líneas por programador.
+  * Mensaje con la clasificación de productividad ("Alta", "Media" o "Baja").
 ---
 
-[🔼 Volver a la tabla de contenidos](#-tabla-de-contenidos)
+### 3.3 Diseño del Algoritmo - Diagrama de Flujo
 
----
-
-### 3.3 Diseño del Algoritmo
-
-#### Pseudocódigo
-
-> 📝 *Escribe aquí el pseudocódigo completo del ejercicio en PseInt o en el estándar usado en clase.*
-
+```mermaid
+graph TD
+    Inicio([INICIO]) --> Vars[Definir variables:<br>int total_programadores, i, mod1, mod2, mod3, lineas_totales]
+    
+    %% BUCLE PROGRAMADORES
+    Vars --> DoProg[DO: Solicitar programadores]
+    DoProg --> ScanProg[\Leer total_programadores\]
+    ScanProg --> WhileProg{¿total_programadores <= 0?}
+    WhileProg -- SÍ --> DoProg
+    
+    %% FOR
+    WhileProg -- NO --> ForInit[FOR: i = 1]
+    ForInit --> ForCheck{¿i <= total_programadores?}
+    
+    %% VALIDACIÓN MÓDULO 1
+    ForCheck -- SÍ --> DoM1[DO: Líneas Módulo 1]
+    DoM1 --> ScanM1[\Leer mod1\]
+    ScanM1 --> IfM1{¿mod1 < 0?}
+    IfM1 -- SÍ --> ErrM1[/Mostrar ERROR: No negativo/] --> WhileM1{¿mod1 < 0?}
+    IfM1 -- NO --> WhileM1
+    WhileM1 -- SÍ --> DoM1
+    
+    %% VALIDACIÓN MÓDULO 2
+    WhileM1 -- NO --> DoM2[DO: Líneas Módulo 2]
+    DoM2 --> ScanM2[\Leer mod2\]
+    ScanM2 --> IfM2{¿mod2 < 0?}
+    IfM2 -- SÍ --> ErrM2[/Mostrar ERROR: No negativo/] --> WhileM2{¿mod2 < 0?}
+    IfM2 -- NO --> WhileM2
+    WhileM2 -- SÍ --> DoM2
+    
+    %% VALIDACIÓN MÓDULO 3
+    WhileM2 -- NO --> DoM3[DO: Líneas Módulo 3]
+    DoM3 --> ScanM3[\Leer mod3\]
+    ScanM3 --> IfM3{¿mod3 < 0?}
+    IfM3 -- SÍ --> ErrM3[/Mostrar ERROR: No negativo/] --> WhileM3{¿mod3 < 0?}
+    IfM3 -- NO --> WhileM3
+    WhileM3 -- SÍ --> DoM3
+    
+    %% OPERACIONES
+    WhileM3 -- NO --> Calc[lineas_totales = mod1 + mod2 + mod3]
+    Calc --> PrintRes[/Mostrar: lineas_totales/]
+    
+    %% CONDICIONALES
+    PrintRes --> IfAlta{¿lineas_totales >= 1000?}
+    IfAlta -- SÍ --> R1[/Productividad: Alta/] --> ForNext
+    IfAlta -- NO --> IfMedia{¿lineas_totales >= 500?}
+    IfMedia -- SÍ --> R2[/Productividad: Media/] --> ForNext
+    IfMedia -- NO --> R3[/Productividad: Baja/] --> ForNext
+    
+    %% CONTROL FOR
+    ForNext[i = i + 1] --> ForCheck
+    ForCheck -- NO --> Fin([FIN])
 ```
-Algoritmo [NombreDelAlgoritmo]
-
-    // Declaración de variables
-    Definir [variables] Como [tipo]
-
-    // Instrucciones
-
-
-Fin Algoritmo
-```
-
-#### Diagrama de Flujo
-
-> 📌 *Inserta aquí la imagen del diagrama de flujo completo del ejercicio.*
-
----
-
-[🔼 Volver a la tabla de contenidos](#-tabla-de-contenidos)
-
----
 
 ### 3.4 Codificación
-
-> 📝 *Escribe aquí el código fuente completo en el lenguaje dado en clase.*
-
 ```c
-// Código fuente en [lenguaje dado en clase]
-// [Nombre del programa]
-
 #include <stdio.h>
-
 int main() {
+    // Definición de variables
+    int total_programadores, i;
+    int mod1, mod2, mod3, lineas_totales;
 
-    // Declaración de variables
+    
+    do {
+        printf("Ingrese la cantidad de programadores a evaluar: ");
+        scanf("%i", &total_programadores);
+        if (total_programadores <= 0) {
+            printf("[ERROR]: La cantidad debe ser mayor a 0.\n");
+        }
+    } while (total_programadores <= 0);
 
+    
+    for (i = 1; i <= total_programadores; i++) {
+        printf(" EVALUACION PROGRAMADOR %i \n", i);
 
-    // Entrada de datos
+        
+        do {
+            printf("Ingrese lineas de codigo del Modulo 1: ");
+            scanf("%i", &mod1);
+            if (mod1 < 0) {
+                printf("[ERROR]: Las lineas de codigo no pueden ser negativas.\n");
+            }
+        } while (mod1 < 0);
 
+        
+        do {
+            printf("Ingrese lineas de codigo del Modulo 2: ");
+            scanf("%i", &mod2);
+            if (mod2 < 0) {
+                printf("[ERROR]: Las lineas de codigo no pueden ser negativas.\n");
+            }
+        } while (mod2 < 0);
 
-    // Proceso
+        
+        do {
+            printf("Ingrese lineas de codigo del Modulo 3: ");
+            scanf("%i", &mod3);
+            if (mod3 < 0) {
+                printf("[ERROR]: Las lineas de codigo no pueden ser negativas.\n");
+            }
+        } while (mod3 < 0);
 
+        
+        lineas_totales = mod1 + mod2 + mod3;
 
-    // Salida de resultados
+        
+        printf("Resultados del Programador %i:\n", i);
+        printf("- Total de lineas procesadas: %i\n", lineas_totales);
 
+       
+        if (lineas_totales >= 1000) {
+            printf("Nivel de Productividad: Alta\n");
+        } else if (lineas_totales >= 500) {
+            printf("Nivel de Productividad: Media\n");
+        } else {
+            printf("Nivel de Productividad: Baja\n");
+        }
+        
+    }
 
     return 0;
 }
@@ -245,40 +309,21 @@ int main() {
 
 ---
 
-[🔼 Volver a la tabla de contenidos](#-tabla-de-contenidos)
-
----
-
 ### 3.5 Validación — Prueba de Escritorio
 
-> 📝 *Completa la tabla con los datos de prueba que utilizaste para verificar el correcto funcionamiento del programa.*
+| Variable            | Programador 1 | Programador 2 |
+| ------------------- | ------------- | ------------- |
+| `mod1`              | 400           | 600           |
+| `mod2`              | 250           | 200           |
+| `mod3`              | 100           | 250           |
+| `lineas_totales`    | 750           | 1050          |
 
-**Datos de prueba utilizados:**
-
-| Variable | Valor ingresado |
-| -------- | --------------- |
-| [var 1]  | [valor]         |
-| [var 2]  | [valor]         |
-
-**Traza de ejecución:**
-
-| Paso | Instrucción ejecutada | Estado de variables | Resultado parcial |
-| ---- | --------------------- | ------------------- | ----------------- |
-| 1    |                       |                     |                   |
-| 2    |                       |                     |                   |
-| 3    |                       |                     |                   |
-| 4    |                       |                     |                   |
-| 5    |                       |                     |                   |
-
-**Salida esperada en consola:**
-
-```
-[Escribe aquí exactamente lo que debería mostrar el programa en pantalla]
-```
 
 ---
 
-[🔼 Volver a la tabla de contenidos](#-tabla-de-contenidos)
+### 3.6 Salida en la consola:
+
+<img width="506" height="332" alt="image" src="https://github.com/user-attachments/assets/de4e2908-e374-46e2-b098-abf1794341a5" />
 
 ---
 
@@ -288,9 +333,8 @@ int main() {
 
 **Principales dificultades:**
 
-- [Dificultad 1: por ejemplo, diferenciar cuándo usar `while` vs `do-while`]
-- [Dificultad 2: por ejemplo, controlar correctamente el contador en el ciclo `for`]
-- [Dificultad 3: por ejemplo, combinar una estructura condicional dentro de un ciclo]
+- Tuve un inconveniente al no comprender la lógica detrás de lo que es el if, esto sucedió al principio de la unidad pero por el uso de las pruebas de escritiorio entendí como funciona su la lógica detras de estas estructuras condicionales.
+- Mi principal dificultad o duda al final de la unidad fue no entender como funcionaban las memorias de almacenamiento de las variables cuando se ejecutaba un for, pensaba que los datos se acumulaban sin tener en cuenta la lógica detras de este bucle repetitivo.
 
 **Reflexión crítica:**
 
@@ -298,8 +342,4 @@ int main() {
 
 ---
 
-[🔼 Volver a la tabla de contenidos](#-tabla-de-contenidos)
-
----
-
-[↩️ Volver al inicio](https://github.com/alexjhoan07-wq/Portafolio-Digital-de-Aprendizaje-Teoria-de-la-Programacion/blob/main/Portafolio.md)
+[ Volver al inicio](https://github.com/alexjhoan07-wq/Portafolio-Digital-de-Aprendizaje-Teoria-de-la-Programacion/blob/main/Portafolio.md)
