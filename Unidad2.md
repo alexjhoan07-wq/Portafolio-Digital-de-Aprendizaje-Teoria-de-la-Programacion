@@ -329,7 +329,6 @@ int main() {
 
 ## 4. Principales Dificultades y Reflexión Crítica
 
-> 📝 *Redacta aquí en primera persona tus dificultades reales durante el estudio de esta unidad y tu reflexión crítica sobre los aprendizajes obtenidos.*
 
 **Principales dificultades:**
 
@@ -338,7 +337,7 @@ int main() {
 
 **Reflexión crítica:**
 
-[Escribe aquí tu reflexión personal sobre cómo los contenidos de esta unidad ampliaron tu comprensión de la programación, qué conexión encuentras con los temas de la Unidad 1, y cómo aplicarías estos conocimientos en problemas reales.]
+Las estructuras de control son indispensables para la elaboración de algoritmos interactivos, ya que nos permiten en base a los datos de entrada mostrarle al usuario varias salidas dependiendo del dato ingresado. La forma de explicar esta unidad con la elaboración del código en cuaderno es una forma eficiente de lograr tener el concepto de la lógica que se ejecuta en nustros algoritmos.
 
 ---
 
