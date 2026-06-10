@@ -6,28 +6,11 @@
 [![C](https://img.shields.io/badge/Lenguaje-C-00599C?style=flat-square&logo=c)](https://img.shields.io/badge/Lenguaje-C-00599C?style=flat-square&logo=c)
 [![Condicionales](https://img.shields.io/badge/Estructuras-Condicionales-27ae60?style=flat-square)](https://img.shields.io/badge/Estructuras-Condicionales-27ae60?style=flat-square)
 [![Repetitivas](https://img.shields.io/badge/Estructuras-Repetitivas-e67e22?style=flat-square)](https://img.shields.io/badge/Estructuras-Repetitivas-e67e22?style=flat-square)
+
+---
+
 </div>
----
 
-## 📋 Tabla de Contenidos
-
-- [1. Estructuras Condicionales](#1-estructuras-condicionales)
-  - [1.1 Condicional Simple — `if`](#11-condicional-simple--if)
-  - [1.2 Condicional Doble — `if-else`](#12-condicional-doble--if-else)
-  - [1.3 Condicional Múltiple — `switch`](#13-condicional-múltiple--switch)
-- [2. Estructuras Repetitivas](#2-estructuras-repetitivas)
-  - [2.1 Ciclo `while`](#21-ciclo-while)
-  - [2.2 Ciclo `do-while`](#22-ciclo-do-while)
-  - [2.3 Ciclo `for`](#23-ciclo-for)
-- [3. Ejercicio Integrador](#3-ejercicio-integrador)
-  - [3.1 Planteamiento del Problema](#31-planteamiento-del-problema)
-  - [3.2 Análisis del Problema](#32-análisis-del-problema)
-  - [3.3 Diseño del Algoritmo](#33-diseño-del-algoritmo)
-  - [3.4 Codificación](#34-codificación)
-  - [3.5 Validación — Prueba de Escritorio](#35-validación--prueba-de-escritorio)
-- [4. Principales Dificultades y Reflexión Crítica](#4-principales-dificultades-y-reflexión-crítica)
-
----
 
 ## 1. Estructuras Condicionales
 
@@ -43,28 +26,15 @@ La estructura `if` evalúa una expresión booleana. Si la condición resulta **v
 
 ```
 Si <condición> Entonces
-    <instrucciones>
-Fin Si
+    <instrucciones>;
+Fin_Si
 ```
 
 #### Estructura en Diagrama de Flujo
 
-> 📌 *Inserta aquí la imagen de tu diagrama de flujo para la estructura `if`.*
+<img width="179" height="269" alt="if drawio" src="https://github.com/user-attachments/assets/33e3f687-f690-408e-98d5-fc50e58c12ba" />
 
-```
-[INICIO] → [Condición?] --Verdadero--> [Instrucciones] → [FIN]
-                        --Falso-------------------------------↗
-```
 
-#### Ejemplo
-
-> 📝 *Describe aquí el ejemplo que trabajaste en clase para la estructura `if`.*
-
----
-
-[🔼 Volver a la tabla de contenidos](#-tabla-de-contenidos)
-
----
 
 ### 1.2 Condicional Doble — `if-else`
 
@@ -74,28 +44,15 @@ La estructura `if-else` garantiza que siempre se ejecute **una acción**: si la 
 
 ```
 Si <condición> Entonces
-    <instrucciones_si_verdadero>
-SiNo
-    <instrucciones_si_falso>
-Fin Si
+    <instrucciones_si_verdadero>;
+Si_No
+    <instrucciones_si_falso>;
+Fin_Si
 ```
 
 #### Estructura en Diagrama de Flujo
 
-> 📌 *Inserta aquí la imagen de tu diagrama de flujo para la estructura `if-else`.*
-
-```
-[INICIO] → [Condición?] --Verdadero--> [Bloque A] → [FIN]
-                        --Falso-------> [Bloque B] ↗
-```
-
-#### Ejemplo
-
-> 📝 *Describe aquí el ejemplo que trabajaste en clase para la estructura `if-else`.*
-
----
-
-[🔼 Volver a la tabla de contenidos](#-tabla-de-contenidos)
+<img width="351" height="299" alt="ifelse drawio" src="https://github.com/user-attachments/assets/bdb43a2e-b82e-4147-9e3a-f83c9c0fa8b5" />
 
 ---
 
@@ -108,25 +65,20 @@ La estructura `switch` no evalúa una expresión booleana directamente, sino que
 ```
 Según <variable> Hacer
     Caso <valor1>:
-        <instrucciones>
+        <instrucciones>;
+        ...
     Caso <valor2>:
-        <instrucciones>
+        <instrucciones>;
+        ...
     De Otro Modo:
-        <instrucciones_por_defecto>
-Fin Según
+        <instrucciones_por_defecto>;
+Fin_Según
 ```
 
 #### Estructura en Diagrama de Flujo
 
-> 📌 *Inserta aquí la imagen de tu diagrama de flujo para la estructura `switch`.*
+<img width="571" height="349" alt="switch drawio" src="https://github.com/user-attachments/assets/850bd893-5785-461e-b3dc-375028a06487" />
 
-#### Ejemplo
-
-> 📝 *Describe aquí el ejemplo que trabajaste en clase para la estructura `switch`.*
-
----
-
-[🔼 Volver a la tabla de contenidos](#-tabla-de-contenidos)
 
 ---
 
@@ -144,26 +96,14 @@ El ciclo `while` repite un bloque de instrucciones **mientras una condición sea
 
 ```
 Mientras <condición> Hacer
-    <instrucciones>
-Fin Mientras
+    <instrucciones>;
+    ...
+Fin_Mientras
 ```
 
 #### Estructura en Diagrama de Flujo
 
-> 📌 *Inserta aquí la imagen de tu diagrama de flujo para el ciclo `while`.*
-
-```
-[INICIO] → [Condición?] --Verdadero--> [Instrucciones] --↑(repite)
-                        --Falso-------> [FIN]
-```
-
-#### Ejemplo
-
-> 📝 *Describe aquí el ejemplo que trabajaste en clase para el ciclo `while`.*
-
----
-
-[🔼 Volver a la tabla de contenidos](#-tabla-de-contenidos)
+<img width="186" height="268" alt="while drawio" src="https://github.com/user-attachments/assets/e9b7857e-9bda-421e-8c3b-2ed0ec321308" />
 
 ---
 
@@ -174,27 +114,16 @@ El ciclo `do-while` garantiza que el bloque de instrucciones se ejecute **al men
 #### Estructura en Pseudocódigo
 
 ```
-Repetir
-    <instrucciones>
-Hasta Que <condición_falsa>
+hacer
+    <instrucciones>;
+    ...
+mientras <condición>;
 ```
 
 #### Estructura en Diagrama de Flujo
 
-> 📌 *Inserta aquí la imagen de tu diagrama de flujo para el ciclo `do-while`.*
+<img width="186" height="306" alt="dowhile drawio" src="https://github.com/user-attachments/assets/99251d6d-6b78-42bc-9946-795392c87331" />
 
-```
-[INICIO] → [Instrucciones] → [Condición?] --Verdadero--↑(repite)
-                                           --Falso----> [FIN]
-```
-
-#### Ejemplo
-
-> 📝 *Describe aquí el ejemplo que trabajaste en clase para el ciclo `do-while`.*
-
----
-
-[🔼 Volver a la tabla de contenidos](#-tabla-de-contenidos)
 
 ---
 
@@ -205,33 +134,22 @@ El ciclo `for` se utiliza cuando se conoce de antemano el **número exacto de re
 #### Estructura en Pseudocódigo
 
 ```
-Para <variable> <- <valor_inicial> Hasta <valor_final> Con Paso <incremento> Hacer
-    <instrucciones>
-Fin Para
+Para (iniciador) Hasta (condición) <incremento> Hacer
+    <instrucciones>;
+Fin_Para
 ```
 
 #### Estructura en Diagrama de Flujo
 
-> 📌 *Inserta aquí la imagen de tu diagrama de flujo para el ciclo `for`.*
+<img width="346" height="242" alt="para drawio" src="https://github.com/user-attachments/assets/dcace249-ca4f-4e36-9ac2-c200513849ca" />
 
-```
-[INICIO] → [inicializar contador] → [Condición?] --Verdadero--> [Instrucciones] → [incrementar] --↑
-                                                  --Falso-------> [FIN]
-```
-
-#### Ejemplo
-
-> 📝 *Describe aquí el ejemplo que trabajaste en clase para el ciclo `for`.*
-
----
-
-[🔼 Volver a la tabla de contenidos](#-tabla-de-contenidos)
 
 ---
 
 ## 3. Ejercicio Integrador
 
-Este ejercicio combina una estructura condicional con una estructura repetitiva para resolver un problema completo, siguiendo las etapas del proceso de desarrollo de algoritmos.
+Este ejercicio combina una estructura condicional con una estructura repetitiva para resolver un problema completo, a conticuación se tiene un conteo de los pasos para la resolución de este:
+
 
 ---
 
