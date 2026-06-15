@@ -58,8 +58,7 @@ Estructuras algorítmicas de control: Estructuras condicionales y Bucles repetit
 ## Declaración de Uso de IA Generativa
 Declaro haber utilizado herramientas de Inteligencia Artificial; se utilizó Claude para la realización de la estructura del portafolio.
 
-###  [Bibliografía]( [Unidad 2](https://github.com/alexjhoan07-wq/Portafolio-Digital-de-Aprendizaje-Teoria-de-la-Programacion/edit/main/Unidad2.md)
-)
+###  [Bibliografía](Bibliografía.md)
 
 
 
