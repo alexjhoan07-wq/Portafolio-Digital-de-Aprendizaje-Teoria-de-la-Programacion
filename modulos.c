@@ -14,6 +14,16 @@ int main (){
         float notaTotalUnidad =  CalculoPromedioUnidad(numeroDeUnidad);
         sumaDeLasUnidades = sumaDeLasUnidades + notaTotalUnidad;
     }
+    float notaFinal= sumaDeLasUnidades/TOTALUNIDAD;
+    printf("La nota final del anio es: %.2f \n", notaFinal);
+    if(notaFinal>=7){
+        printf("Aprobado");
+    }else if(notaFinal>=2.5 && notaFinal<7){
+        printf("Supletorio");
+    }else{
+    printf("Reprobado");
+    }
+    return 0;
     
     return 0;
     
