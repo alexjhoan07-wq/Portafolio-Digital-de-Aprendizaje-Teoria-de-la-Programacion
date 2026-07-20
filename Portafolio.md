@@ -49,10 +49,19 @@ Elaborar un Portafolio Digital que registre y organice las actividades de la Uni
 
 Conceptos fundamentales de programación: algoritmo, pseudocódigo, diagrama de flujo, prueba de escritorio y lenguajes de programación. Aplicación práctica con estructuras secuenciales en lenguaje C.
 
+---
 
 ###  [Unidad 2](https://github.com/alexjhoan07-wq/Portafolio-Digital-de-Aprendizaje-Teoria-de-la-Programacion/blob/main/Unidad2.md)
 
 Estructuras algorítmicas de control: Estructuras condicionales y Bucles repetitivos
+
+---
+
+### [Unidad 3](Unidad3.md)
+ 
+Modularidad: paso de parámetros por valor y por referencia. Arreglos: estructura unidimensional y bidimensional, con un ejemplo práctico para cada tipo.
+ 
+---
 
 
 ## Declaración de Uso de IA Generativa
