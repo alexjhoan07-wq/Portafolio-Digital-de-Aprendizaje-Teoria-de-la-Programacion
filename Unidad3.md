@@ -198,6 +198,8 @@ En este ejemplo se declara una matriz de 2 filas por 3 columnas, se llena median
 **Principales dificultades:**
 
 -  La principal dificultad que tuve fue el poder diferenciar el paso de parámetros por referencia y por variable, y como estos actuan y se los agrega en el código.
+  
+- Como funcionan los arreglos, como estos almacenan datos y como acceder a estos.
 
 
 **Reflexión crítica:**
