@@ -22,16 +22,7 @@ Una función se compone de un **encabezado** (tipo de retorno, nombre y parámet
 
 En el paso **por valor**, la función recibe una **copia** del dato original. Cualquier modificación que se realice dentro de la función afecta únicamente a esa copia local, por lo que la variable original en el programa principal **no se altera**.
 
-#### Estructura en Pseudocódigo
 
-[#estructura-en-pseudocódigo](#estructura-en-pseudocódigo)
-
-```
-Funcion <tipo> nombreFuncion(<tipo> parametro)
-    <instrucciones>;
-    Retornar <valor>;
-Fin_Funcion
-```
 
 #### Ejemplo en Lenguaje C
 
@@ -75,15 +66,7 @@ La variable `valor` conserva su valor original porque la función `incrementar` 
 
 En el paso **por referencia**, en lugar de enviar una copia del dato, se envía la **dirección de memoria** de la variable (mediante punteros, `&` y `*` en C). Esto permite que la función acceda y **modifique directamente** el valor original almacenado en el programa principal.
 
-#### Estructura en Pseudocódigo
 
-[#estructura-en-pseudocódigo-1](#estructura-en-pseudocódigo-1)
-
-```
-Funcion <tipo> nombreFuncion(<tipo> &parametro)
-    <instrucciones sobre el valor referenciado>;
-Fin_Funcion
-```
 
 #### Ejemplo en Lenguaje C
 
@@ -135,17 +118,7 @@ Un arreglo (array) es una estructura de datos que permite almacenar **múltiples
 
 El arreglo unidimensional, o **vector**, almacena los datos en una sola fila o dimensión. Cada elemento se identifica con un único índice, que en C comienza en `0`.
 
-#### Estructura en Pseudocódigo
 
-[#estructura-en-pseudocódigo-2](#estructura-en-pseudocódigo-2)
-
-```
-Arreglo <tipo> nombre[tamaño];
-
-Para i = 0 Hasta tamaño-1 Hacer
-    Leer nombre[i];
-Fin_Para
-```
 
 #### Ejemplo en Lenguaje C
 
@@ -182,19 +155,7 @@ Este ejemplo recorre el vector `notas` con un ciclo `for`, almacena cinco califi
 
 El arreglo bidimensional, o **matriz**, organiza los datos en **filas y columnas**, por lo que cada elemento se identifica mediante dos índices: uno para la fila y otro para la columna. Es útil para representar tablas, cuadrículas o información con doble entrada.
 
-#### Estructura en Pseudocódigo
 
-[#estructura-en-pseudocódigo-3](#estructura-en-pseudocódigo-3)
-
-```
-Arreglo <tipo> nombre[filas][columnas];
-
-Para i = 0 Hasta filas-1 Hacer
-    Para j = 0 Hasta columnas-1 Hacer
-        Leer nombre[i][j];
-    Fin_Para
-Fin_Para
-```
 
 #### Ejemplo en Lenguaje C
 
@@ -236,12 +197,12 @@ En este ejemplo se declara una matriz de 2 filas por 3 columnas, se llena median
 
 **Principales dificultades:**
 
-- *(Pendiente: describe aquí la dificultad concreta que tuviste, por ejemplo al diferenciar el paso por valor del paso por referencia, o al manejar los índices de una matriz.)*
-- *(Pendiente: agrega una segunda dificultad si la tuviste, siguiendo el mismo formato usado en la Unidad 2.)*
+-  La principal dificultad que tuve fue el poder diferenciar el paso de parámetros por referencia y por variable, y como estos actuan y se los agrega en el código.
+
 
 **Reflexión crítica:**
 
-*(Pendiente: redacta tu propia reflexión sobre la importancia de la modularidad y los arreglos en la construcción de programas más organizados y reutilizables, tal como lo hiciste al cierre de la Unidad 2.)*
+- Lo más importante de esta unidad es la modularidad, ya que es algo fundamental a la hora de programar, ya que nos permite segmentar la solución de un problema en solucines puntuales, permitiendo poder utilizar varias veces funciones en el cuerpo general de la solución.
 
 ---
 
