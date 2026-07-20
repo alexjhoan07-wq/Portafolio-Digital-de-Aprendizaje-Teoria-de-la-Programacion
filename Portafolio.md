@@ -65,6 +65,14 @@ Modularidad: paso de parámetros por valor y por referencia. Arreglos: estructur
 
 
 ## Conclusiones Generales
+
+El desarrollo de esta unidad uno permitió comprender que todo programa parte de un proceso lógico antes que de la escritura de código: primero se piensa el algoritmo, luego se representa en pseudocódigo o diagrama de flujo, y solo después se traduce a un lenguaje como C. La prueba de escritorio resultó fundamental para verificar que la lógica planteada fuera correcta antes de ejecutar el programa, y trabajar con estructuras secuenciales sentó las bases necesarias para abordar estructuras más complejas en las siguientes unidades.
+
+
+La unidad dos demostró que las estructuras de control son las que realmente le dan "inteligencia" a un programa, permitiéndole tomar decisiones (`if`, `if-else`, `switch`) y repetir acciones de forma automática (`while`, `do-while`, `for`) según las condiciones del problema. La resolución de problemas prácticos evidenció que la combinación de condicionales y bucles es la base para resolver desafíos del mundo real, como la validación de datos y la clasificación de resultados. Asimismo, se comprendió que elegir correctamente el tipo de bucle depende directamente de si se conoce o no el número de repeticiones de antemano.
+
+
+Al trabajar con modularidad se comprendió la importancia de dividir un programa en funciones para hacerlo más organizado, reutilizable y fácil de depurar, asimilando la diferencia clave entre el paso de parámetros por valor (donde la función trabaja sobre una copia) y por referencia (donde se modifica directamente la variable original mediante punteros). Por su parte, el uso de arreglos unidimensionales y bidimensionales permitió manejar múltiples datos relacionados de forma ordenada, evitando declarar variables individuales y facilitando su procesamiento mediante bucles anidados.
  
 
 ---
