@@ -4,6 +4,7 @@
 # Unidad 2 – Estructuras algorítmicas de control
 
 
+
 [![Condicionales](https://img.shields.io/badge/Estructuras-Condicionales-27ae60?style=flat-square)](https://img.shields.io/badge/Estructuras-Condicionales-27ae60?style=flat-square)
 [![Repetitivas](https://img.shields.io/badge/Estructuras-Repetitivas-e67e22?style=flat-square)](https://img.shields.io/badge/Estructuras-Repetitivas-e67e22?style=flat-square)
 
