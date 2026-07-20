@@ -1,3 +1,6 @@
+
+
+
 ## Bibliografía
 | *[1]* | A. J. Edwards-Crespo et al., "El pensamiento computacional: un reto para la educación de cara al siglo XXI," Revista Universidad y Sociedad, vol. 11, no. 1, 2019. [En línea]. Disponible: http://scielo.sld.cu/scielo.php?script=sci_arttext&pid=S2077-29552019000100147 |
 
