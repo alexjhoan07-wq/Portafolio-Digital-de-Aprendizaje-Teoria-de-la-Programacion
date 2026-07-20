@@ -64,6 +64,12 @@ Modularidad: paso de parámetros por valor y por referencia. Arreglos: estructur
 ---
 
 
+## Conclusiones Generales
+ 
+
+---
+
+
 ## Declaración de Uso de IA Generativa
 Declaro haber utilizado herramientas de Inteligencia Artificial; se utilizó Claude para la realización de la estructura del portafolio.
 
