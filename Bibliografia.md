@@ -1,5 +1,5 @@
 <a href="Portafolio.md">↩️ Volver al inicio</a>
-<div align="center">
+
 
 
 ## Bibliografía
@@ -24,8 +24,8 @@
 
 | *[11]* | IBM, "Repetitive loops (Instructions)," IBM Documentation, 2024. Disponible en: https://www.ibm.com/docs/es/cics-ts/6.x?topic=instructions-repetitive-loops |
 
-
 <div align="center">
+
 
 
 <a href="Portafolio.md">↩️ Volver al inicio</a>
