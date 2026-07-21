@@ -191,6 +191,52 @@ En este ejemplo se declara una matriz de 2 filas por 3 columnas, se llena median
 
 ---
 
+### 2.3 Arreglo Tridimensional
+
+[#23-arreglo-tridimensional](#23-arreglo-tridimensional)
+
+El arreglo tridimensional añade una tercera dimensión a la estructura, por lo que cada elemento se identifica mediante **tres índices**: uno para la capa (o "página"), otro para la fila y otro para la columna. Es útil para representar información con múltiples niveles, como una serie de matrices agrupadas (por ejemplo, varias secciones de un curso, cada una con sus propias filas y columnas de notas).
+
+#### Ejemplo en Lenguaje C
+
+[#ejemplo-en-lenguaje-c-4](#ejemplo-en-lenguaje-c-4)
+
+```c
+#include <stdio.h>
+
+int main() {
+    int cubo[2][2][3];
+    int i, j, k;
+
+    for (i = 0; i < 2; i++) {
+        for (j = 0; j < 2; j++) {
+            for (k = 0; k < 3; k++) {
+                printf("Ingrese el valor [%d][%d][%d]: ", i, j, k);
+                scanf("%d", &cubo[i][j][k]);
+            }
+        }
+    }
+
+    printf("\nArreglo tridimensional ingresado:\n");
+    for (i = 0; i < 2; i++) {
+        printf("Capa %d:\n", i);
+        for (j = 0; j < 2; j++) {
+            for (k = 0; k < 3; k++) {
+                printf("%d\t", cubo[i][j][k]);
+            }
+            printf("\n");
+        }
+        printf("\n");
+    }
+
+    return 0;
+}
+```
+
+En este ejemplo se declara un arreglo tridimensional de 2 capas, 2 filas y 3 columnas, se llena mediante tres ciclos `for` anidados (capa, fila y columna) y luego se imprime capa por capa en formato tabular.
+
+---
+
 ## 3. Principales Dificultades y Reflexión Crítica
 
 [#3-principales-dificultades-y-reflexión-crítica](#3-principales-dificultades-y-reflexión-crítica)
